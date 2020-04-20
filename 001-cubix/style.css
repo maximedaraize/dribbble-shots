@@ -1,0 +1,40 @@
+:root {
+  --blue-dark: #274c61;
+  --blue-light: #9dd0d9;
+  --orange: #ec7e68;
+  --pink: #edbcbb;
+  --green: #2f4b3a;
+  --sand: #cec3ad;
+  --bg-body: #e9e6e3;
+  --bg-container: #f3f3f3;
+  --text: #3e3e3e;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-body);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containter {
+  background: var(--bg-container);
+  width: 1200px;
+  height: 652px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  padding: 47px;
+}
+
+aside {
+  display: grid;
+  grid-template-columns: repeat(4, 152px);
+  grid-auto-rows: 152px;
+}
+
+.shape {
+  outline: 1px solid red;
+}
