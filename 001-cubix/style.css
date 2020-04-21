@@ -1,13 +1,14 @@
 :root {
-  --blue-dark: #274c61;
-  --blue-light: #9dd0d9;
-  --orange: #ec7e68;
-  --pink: #edbcbb;
+  --blue-dark: #184e63;
+  --blue-light: #90d3dd;
+  --orange: #fd7964;
+  --pink: #f5baba;
   --green: #2f4b3a;
-  --sand: #cec3ad;
-  --bg-body: #e9e6e3;
-  --bg-container: #f3f3f3;
+  --sand: #e7d9be;
+  --bg-body: #e5e1de;
+  --bg-container: #f4f4f4;
   --text: #3e3e3e;
+  --shape-width: 152px;
 }
 
 body {
@@ -18,23 +19,130 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: "Manrope", sans-serif;
+}
+
+h1,
+p,
+a,
+li {
+  font-family: "Manrope", sans-serif;
+}
+
+li {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+li:first-child {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 400;
 }
 
 .containter {
+  display: flex;
+  box-sizing: border-box;
   background: var(--bg-container);
-  width: 1200px;
-  height: 652px;
+  width: 1000px;
+  height: calc(var(--shape-width) * 3 + (47px * 2));
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   padding: 47px;
 }
+main {
+  width: 302px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cta {
+  width: 152px;
+}
+
+p {
+  font-size: 10px;
+  font-weight: 200;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.button {
+  font-size: 8px;
+  padding: 4px 12px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1px solid var(--blue-dark);
+  color: var(--blue-dark);
+  text-transform: uppercase;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  padding: 0;
+}
 
 aside {
   display: grid;
-  grid-template-columns: repeat(4, 152px);
-  grid-auto-rows: 152px;
+  grid-template-columns: repeat(4, var(--shape-width));
+  grid-auto-rows: var(--shape-width);
 }
 
-.shape {
+.blue-dark {
+  background: var(--blue-dark);
+}
+
+.blue-light {
+  background: var(--blue-light);
+}
+
+.orange {
+  background: var(--orange);
+}
+.pink {
+  background: var(--pink);
+}
+.sand {
+  background: var(--sand);
+}
+.green {
+  background: var(--green);
+}
+
+/* .shape {
   outline: 1px solid red;
+  background: lime;
+} */
+
+.round {
+  border-radius: 50%;
+}
+
+/*bottom right*/
+.br {
+  border-radius: 152px 0 0 0;
+}
+
+/*bottom left*/
+.bl {
+  border-radius: 0 152px 0 0;
+}
+
+/*top left*/
+.tl {
+  border-radius: 0 0 152px 0;
+}
+
+/*top right*/
+.tr {
+  border-radius: 0 0 0 152px;
 }
