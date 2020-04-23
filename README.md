@@ -1,6 +1,6 @@
 # dribbble-shots
 
-Simply find thing I like on dribbble and rebuild it.
+Rebuild dribbble shot
 
 ## List of the shots I made (original design and codepen)
 
